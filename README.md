@@ -4,6 +4,8 @@ This is an example application to deploy with Kubernetes. In case it isn't obvio
 ## Docker Images
 This example is expected to be deployed with Docker. Both the client and the server include a Dockerfile.
 
+### Configuration
+
 The server accepts the following environment variables for configuration:
 * `PORT` - The port to listen on (default: 3000)
 * `FRONTEND_URL` - The URL the client is available on; used for redirecting after a Stripe Checkout session (no default, example: `https://app.example.com`)
@@ -16,3 +18,7 @@ The server accepts the following environment variables for configuration:
 
 The client accepts one environment variable:
 * `GRAPHQL_URL` - The URL of the GraphQL endpoint to use (example: `http://api.example.com/graphql`)
+
+### Migrations
+
+The server will not run any outstanding database migrations automatically - to run them, execute `yarn migrate` in a running server container (or a fresh container with the same environment variables set).
