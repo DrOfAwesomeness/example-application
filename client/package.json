@@ -1,0 +1,26 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "description": "Example app client",
+  "author": "Matthew East <matthew@mattheweast.me>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "parcel": "^2.6.2",
+    "process": "^0.11.10",
+    "sharp": "^0.29.1"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.9.2",
+    "graphql": "^16.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0"
+  },
+  "scripts": {
+    "build": "yarn parcel build src/index.html"
+  }
+}

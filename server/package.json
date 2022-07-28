@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "description": "Example application server",
+  "main": "src/server.ts",
+  "author": "Matthew East <matthew@mattheweast.me>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@types/node": "^18.6.1",
+    "apollo-server": "^3.10.0",
+    "dotenv": "^16.0.1",
+    "graphql": "^16.5.0",
+    "mysql2": "^2.3.3",
+    "pino": "^8.3.0",
+    "reflect-metadata": "^0.1.13",
+    "stripe": "^9.16.0",
+    "typeorm": "^0.3.7",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node src/server.js",
+    "migrate": "typeorm migration:run -d lib/database.js"
+  }
+}
