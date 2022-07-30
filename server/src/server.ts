@@ -77,6 +77,9 @@ const typeDefs = gql`
 `;
 
 const server = new ApolloServer({
+  cors: {
+    origin: true
+  },
   typeDefs,
   resolvers,
   csrfPrevention: true,
